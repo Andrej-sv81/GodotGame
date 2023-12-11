@@ -1,3 +1,29 @@
-[gd_scene format=3 uid="uid://d3fjmuy8thjar"]
+[gd_scene load_steps=5 format=3 uid="uid://d3fjmuy8thjar"]
+
+[ext_resource type="PackedScene" uid="uid://circpv8e872nx" path="res://entities/player/player.tscn" id="1_42f3d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7salp"]
+size = Vector2(259, 38)
+
+[sub_resource type="Gradient" id="Gradient_k1euy"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iuc1w"]
+gradient = SubResource("Gradient_k1euy")
 
 [node name="WorldScene" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_42f3d")]
+position = Vector2(0, 12)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(-2, 98)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(3.5, -23)
+shape = SubResource("RectangleShape2D_7salp")
+debug_color = Color(0.972549, 0, 0.431373, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+position = Vector2(3.00001, -23)
+scale = Vector2(4.0625, 0.59375)
+texture = SubResource("GradientTexture2D_iuc1w")
