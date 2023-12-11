@@ -9,6 +9,7 @@ size = Vector2(259, 38)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_iuc1w"]
 gradient = SubResource("Gradient_k1euy")
+fill_from = Vector2(0.995413, 0.110092)
 
 [node name="WorldScene" type="Node2D"]
 
