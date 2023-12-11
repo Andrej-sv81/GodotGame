@@ -28,3 +28,42 @@ debug_color = Color(0.972549, 0, 0.431373, 0.419608)
 position = Vector2(3.00001, -23)
 scale = Vector2(4.0625, 0.59375)
 texture = SubResource("GradientTexture2D_iuc1w")
+
+[node name="Ground2" type="StaticBody2D" parent="."]
+position = Vector2(181, 117)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2"]
+position = Vector2(3.5, -23)
+shape = SubResource("RectangleShape2D_7salp")
+debug_color = Color(0.972549, 0, 0.431373, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground2"]
+position = Vector2(3.00001, -23)
+scale = Vector2(4.0625, 0.59375)
+texture = SubResource("GradientTexture2D_iuc1w")
+
+[node name="Ground3" type="StaticBody2D" parent="."]
+position = Vector2(405, 98)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground3"]
+position = Vector2(3.5, -23)
+shape = SubResource("RectangleShape2D_7salp")
+debug_color = Color(0.972549, 0, 0.431373, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground3"]
+position = Vector2(3.00001, -23)
+scale = Vector2(4.0625, 0.59375)
+texture = SubResource("GradientTexture2D_iuc1w")
+
+[node name="Ground4" type="StaticBody2D" parent="."]
+position = Vector2(398, 109)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground4"]
+position = Vector2(3.5, -23)
+shape = SubResource("RectangleShape2D_7salp")
+debug_color = Color(0.972549, 0, 0.431373, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground4"]
+position = Vector2(3.50001, -23)
+scale = Vector2(4.04688, 0.59375)
+texture = SubResource("GradientTexture2D_iuc1w")
