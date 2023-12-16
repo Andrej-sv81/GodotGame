@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3fjmuy8thjar"]
+[gd_scene load_steps=6 format=3 uid="uid://d3fjmuy8thjar"]
 
 [ext_resource type="PackedScene" uid="uid://circpv8e872nx" path="res://entities/player/player.tscn" id="1_42f3d"]
+[ext_resource type="PackedScene" uid="uid://c4f4y2stff5d4" path="res://entities/enemies/Enemy 1.tscn" id="2_ijv87"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7salp"]
 size = Vector2(259, 38)
@@ -67,3 +68,6 @@ debug_color = Color(0.972549, 0, 0.431373, 0.419608)
 position = Vector2(3.50001, -23)
 scale = Vector2(4.04688, 0.59375)
 texture = SubResource("GradientTexture2D_iuc1w")
+
+[node name="Enemy1" parent="." instance=ExtResource("2_ijv87")]
+position = Vector2(138, 63)

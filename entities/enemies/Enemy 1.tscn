@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4f4y2stff5d4"]
+
+[ext_resource type="Script" path="res://entities/enemies/Enemy 1.gd" id="1_1f1ad"]
+[ext_resource type="Script" path="res://entities/enemies/State Machine.gd" id="2_3mxjs"]
+[ext_resource type="Script" path="res://entities/enemies/EnemyIdle.gd" id="3_rcejw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lemar"]
+size = Vector2(13, 10)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_12mhl"]
+
+[node name="Enemy 1" type="CharacterBody2D"]
+script = ExtResource("1_1f1ad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.5, -5)
+shape = SubResource("RectangleShape2D_lemar")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6.7, -5)
+scale = Vector2(13.4, 10)
+texture = SubResource("PlaceholderTexture2D_12mhl")
+
+[node name="State Machine" type="Node2D" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_3mxjs")
+initial_state = NodePath("EnemyIdle")
+
+[node name="EnemyIdle" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("3_rcejw")
+enemy = NodePath("../..")
+move_speed = 20.0

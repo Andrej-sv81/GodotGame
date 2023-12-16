@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://circpv8e872nx"]
 
 [ext_resource type="Script" path="res://entities/player/CharacterBody2D.gd" id="1_jitwv"]
-[ext_resource type="Texture2D" uid="uid://dkf1g4w5l0lpp" path="res://entities/player/urk2.png" id="2_shrbn"]
+[ext_resource type="Texture2D" uid="uid://dkf1g4w5l0lpp" path="res://entities/player/assets/urk2.png" id="2_shrbn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2sb61"]
 radius = 4.0
@@ -14,8 +14,8 @@ script = ExtResource("1_jitwv")
 zoom = Vector2(3, 3)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1, -2)
-scale = Vector2(0.5625, 0.576974)
+position = Vector2(0.5, -2)
+scale = Vector2(0.53125, 0.576974)
 texture = ExtResource("2_shrbn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
